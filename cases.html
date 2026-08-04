@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кейсы внедрений — Sitel</title>
+  <meta name="description" content="Обезличенные кейсы внедрения речевой аналитики, автозаказа и документооборота. Федеральные ритейлеры, банки, сети медцентров.">
+  
+  <meta property="og:title" content="Кейсы внедрений — Sitel">
+  <meta property="og:description" content="Обезличенные кейсы с измеримыми результатами. Имена клиентов — по запросу под NDA.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-preview.png">
+  <meta property="og:url" content="/cases.html">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231D4ED8'/><text x='50' y='68' text-anchor='middle' fill='white' font-size='58' font-family='Georgia' font-weight='900'>S</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+
+</head>
+
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">S</div><span class="logo-text">Sitel</span></a>
+    <nav class="nav-links">
+      <div class="dropdown" id="products-dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('products-dropdown')">Платформы</button>
+        <div class="dropdown-menu">
+          <a href="index.html">Речевая аналитика (флагман)</a>
+          <a href="platforms/auto-order.html">Умный автозаказ</a>
+          <a href="platforms/docs.html">Документооборот</a>
+        </div>
+      </div>
+      <a href="cases.html" style="color:var(--blue-700);font-weight:600;">Кейсы</a>
+      <a href="security.html">Безопасность</a>
+      <a href="architecture.html">Архитектура</a>
+    </nav>
+    <div class="header-actions">
+      <a href="downloads/sitel-presentation.pdf" download class="btn btn-outline btn-sm">PDF</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Запросить демо</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Меню">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <strong style="display:block;padding:12px 0;font-size:13px;color:var(--text-light);text-transform:uppercase;">Платформы</strong>
+    <div class="mobile-submenu">
+      <a href="index.html" onclick="closeMobile()">Речевая аналитика (флагман)</a>
+      <a href="platforms/auto-order.html" onclick="closeMobile()">Умный автозаказ</a>
+      <a href="platforms/docs.html" onclick="closeMobile()">Документооборот</a>
+    </div>
+    <a href="cases.html" onclick="closeMobile()" style="color:var(--blue-700);font-weight:600;">Кейсы</a>
+    <a href="security.html" onclick="closeMobile()">Безопасность</a>
+    <a href="architecture.html" onclick="closeMobile()">Архитектура</a>
+    <a href="contact.html" onclick="closeMobile()" style="color:var(--blue-700);font-weight:600;">Запросить демо →</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="badge badge-blue" style="margin-bottom:12px;">РЕЗУЛЬТАТЫ</span>
+    <h1>Кейсы внедрения</h1>
+    <p>Обезличенные кейсы по требованиям NDA. Имена клиентов и отраслевые детали предоставляются по запросу под соглашение о неразглашении.</p>
+     <p style="color: red;">ЭТО ДЕМО ВЕРСИЯ САЙТА!! Лента с компаниями может быть добавлена</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <!-- Кейс 1: Ритейлер -->
+    <div class="case-card-large">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:12px;">ФЕДЕРАЛЬНЫЙ РИТЕЙЛЕР</span>
+        <p class="case-meta">12 000 звонков в сутки · 45 контакт-центров · форма А (свой GPU-сервер)</p>
+        <h3 style="margin-bottom:16px;">От выборочного прослушивания к 100% контролю</h3>
+        <div class="case-problem">
+          <strong style="display:block;margin-bottom:8px;color:#0F172A;">Проблема:</strong>
+          <span style="color:#334155;">Ручная проверка 5% звонков супервизорами. Неконтролируемые скрипты, невозможно найти причины повторных обращений. Нет объективной оценки операторов.</span>
+        </div>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;"><strong style="color:#0F172A;">Решение:</strong> внедрение речевой аналитики на собственном GPU-сервере компании. Данные не покидают периметр, интеграция с существующей телефонией без замены.</p>
+        <p style="font-size:14px;color:var(--text-muted);"><strong style="color:#0F172A;">Срок:</strong> пилот за 3 недели, полное развёртывание за 2 месяца.</p>
+      </div>
+      <div>
+        <div class="case-metrics-grid">
+          <div class="case-metric-box">
+            <div class="value">−X%</div>
+            <div class="label">эскалаций</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">+Y%</div>
+            <div class="label">конверсии</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">100%</div>
+            <div class="label">звонков под контролем</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">×7</div>
+            <div class="label">скорость обработки</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--text-muted);margin-top:16px;padding:12px;background:#F1F5F9;border-radius:8px;"><strong>Запрос под NDA:</strong> имена клиентов, точные цифры и детали внедрения — по запросу для руководителей закупочных комитетов.</p>
+      </div>
+    </div>
+
+    <!-- Кейс 2: Банк -->
+    <div class="case-card-large">
+      <div>
+        <span class="badge badge-teal" style="margin-bottom:12px;">КРУПНЫЙ БАНК</span>
+        <p class="case-meta">800 операторов · комплаенс-контроль · форма А (единственная приемлемая)</p>
+        <h3 style="margin-bottom:16px;">Автоматический комплаенс на 100% звонков</h3>
+        <div class="case-problem">
+          <strong style="display:block;margin-bottom:8px;color:#0F172A;">Проблема:</strong>
+          <span style="color:#334155;">Служба ИБ и регулятор требуют 100% комплаенс-контроля звонков. Ручные проверки не справляются с объёмом. Отсутствие единой аналитики по филиалам.</span>
+        </div>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;"><strong style="color:#0F172A;">Решение:</strong> развёртывание в контуре банка (форма А). Данные не покидают периметр — это единственная приемлемая для комплаенса банка форма.</p>
+        <p style="font-size:14px;color:var(--text-muted);"><strong style="color:#0F172A;">Проверка:</strong> совпадение автоматической оценки с оценками супервизоров ≥85% на пилоте.</p>
+      </div>
+      <div>
+        <div class="case-metrics-grid">
+          <div class="case-metric-box">
+            <div class="value">−X%</div>
+            <div class="label">нарушений</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">+Y%</div>
+            <div class="label">NPS</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">100%</div>
+            <div class="label">комплаенс-контроль</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">≥85%</div>
+            <div class="label">совпадение с супервизорами</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Кейс 3: Медцентры -->
+    <div class="case-card-large">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:12px;">СЕТЬ МЕДИЦИНСКИХ ЦЕНТРОВ</span>
+        <p class="case-meta">3 клиники · 200 звонков в день · форма Б → А (миграция за год)</p>
+        <h3 style="margin-bottom:16px;">Запись на вечерние слоты без потерь</h3>
+        <div class="case-problem">
+          <strong style="display:block;margin-bottom:8px;color:#0F172A;">Проблема:</strong>
+          <span style="color:#334155;">Администраторы теряют записи на вечерние слоты. Нет аналитики по конверсии «звонок → запись». Причину потерь не видно без прослушивания сотен звонков.</span>
+        </div>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;"><strong style="color:#0F172A;">Решение:</strong> начальный этап — подписка (форма Б) для быстрого старта, затем миграция на собственный GPU-сервер (форма А).</p>
+        <p style="font-size:14px;color:var(--text-muted);"><strong style="color:#0F172A;">Рост:</strong> продукт масштабируется вместе с клиентом. Медцентр начинает с «Базы», через год докупает подписку, сеть через два — свой сервер.</p>
+      </div>
+      <div>
+        <div class="case-metrics-grid">
+          <div class="case-metric-box">
+            <div class="value">+X%</div>
+            <div class="label">заполняемость слотов</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">−Y%</div>
+            <div class="label">пропусков записей</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">3 нед.</div>
+            <div class="label">до первых выводов</div>
+          </div>
+          <div class="case-metric-box">
+            <div class="value">Б → А</div>
+            <div class="label">миграция за год</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#EFF6FF;border-color:#DBEAFE;text-align:center;">
+      <h4 style="margin-bottom:12px;">Нужны детали под NDA?</h4>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;">Точные цифры, имена клиентов и отраслевые подробности предоставляются после подписания соглашения о неразглашении — для руководителей закупочных комитетов и служб ИБ.</p>
+      <a href="contact.html" class="btn btn-primary">Запросить детали под NDA</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top-grid">
+      
+      <!-- Колонка 1: Контакты -->
+      <div class="footer-info-block">
+        <h4>ПРЯМАЯ СВЯЗЬ</h4>
+        <div class="contact-item">
+          <span class="contact-label">Телефон</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+      </div>
+      
+      <!-- Колонка 2: Платформы -->
+      <div class="footer-info-block">
+        <h4>ПЛАТФОРМЫ</h4>
+        <a href="index.html">Речевая аналитика</a>
+        <a href="platforms/auto-order.html">Умный автозаказ</a>
+        <a href="architecture.html">Архитектура</a>
+        <a href="platforms/auto-order.html">Оборудование</a>
+      </div>
+
+      <!-- Колонка 3: Компания -->
+      <div class="footer-info-block">
+        <h4>КОМПАНИЯ</h4>
+        <a href="cases.html">Кейсы</a>
+        <a href="security.html">Безопасность</a>
+      </div>
+
+      <!-- Колонка 4: Документы -->
+      <div class="footer-info-block">
+        <h4>ДОКУМЕНТЫ</h4>
+        <a href="privacy.html">Политика ПД</a>
+        <a href="#">Соглашение</a>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <span>© 2026 Sitel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile menu
+function closeMobile() { 
+  document.getElementById('mobile-menu').classList.remove('open'); 
+}
+
+// Dropdown
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
+  if (!dropdown) return;
+  dropdown.classList.toggle('open');
+}
+
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.dropdown.open').forEach(d => {
+    if (!d.contains(e.target)) d.classList.remove('open');
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || this.getAttribute('onclick')) return;
+    const target = document.querySelector(href);
+    if (target) { 
+      e.preventDefault(); 
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); 
+      closeMobile(); 
+    }
+  });
+});
+</script>
+</body>
+</html>

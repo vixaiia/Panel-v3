@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitel — Речевая аналитика 100% звонков в вашем контуре</title>
+  <meta name="description" content="Речевая аналитика on-premise: расшифровка 100% звонков, контроль скриптов, оценка операторов. Базовый продукт — у вас навсегда. Пилот за 2–4 недели.">
+  
+  <meta property="og:title" content="Sitel — Речевая аналитика в вашем контуре">
+  <meta property="og:description" content="100% звонков под контролем. Данные не покидают ваш контур.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sitel.ru/og-preview.png">
+  
+  <!-- Шрифты через Google Fonts CDN (как раньше) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- Favicon inline SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231D4ED8'/><text x='50' y='68' text-anchor='middle' fill='white' font-size='58' font-family='Georgia' font-weight='900'>S</text></svg>">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">S</div>
+      <span class="logo-text">Sitel</span>
+    </a>
+    
+    <nav class="nav-links">
+      <div class="dropdown" id="products-dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown('products-dropdown')" aria-expanded="false">Платформы</button>
+        <div class="dropdown-menu">
+          <a href="index.html">Речевая аналитика (флагман)</a>
+          <a href="platforms/auto-order.html">Умный автозаказ</a>
+          <a href="platforms/docs.html">Документооборот</a>
+        </div>
+      </div>
+      <a href="cases.html">Кейсы</a>
+      <a href="security.html">Безопасность</a>
+      <a href="architecture.html">Архитектура</a>
+    </nav>
+    
+    <div class="header-actions">
+      <a href="downloads/sitel-presentation.pdf" download class="btn btn-outline btn-sm">PDF</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Запросить демо</a>
+    </div>
+    
+    <button class="mobile-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Меню">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <strong style="display:block;padding:12px 0;font-size:13px;color:var(--text-light);text-transform:uppercase;">Платформы</strong>
+    <div class="mobile-submenu">
+      <a href="index.html" onclick="closeMobile()">Речевая аналитика</a>
+      <a href="platforms/auto-order.html" onclick="closeMobile()">Умный автозаказ</a>
+      <a href="platforms/docs.html" onclick="closeMobile()">Документооборот</a>
+    </div>
+    <a href="cases.html" onclick="closeMobile()">Кейсы</a>
+    <a href="security.html" onclick="closeMobile()">Безопасность</a>
+    <a href="architecture.html" onclick="closeMobile()">Архитектура</a>
+    <a href="contact.html" onclick="closeMobile()" style="color:var(--blue-700);font-weight:600;">Запросить демо →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:16px;">ФЛАГМАНСКИЙ ПРОДУКТ</span>
+        <h1>Речевая аналитика 100% звонков <span>в вашем контуре</span></h1>
+        <p>Базовый продукт работает на вашем сервере — расшифровка, контроль скриптов, эмоции, скоринг операторов. Расширенная аналитика подключается, когда нужна глубина. Данные не покидают периметр компании.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Запросить демо</a>
+          <a href="downloads/sitel-presentation.pdf" download class="btn btn-outline">Скачать презентацию</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="proto-dashboard">
+          <div class="proto-tag"><span class="badge badge-amber">ПРОТОТИП</span></div>
+          <div class="proto-header">
+            <div class="proto-dot" style="background:#EF4444;"></div>
+            <div class="proto-dot" style="background:#F59E0B;"></div>
+            <div class="proto-dot" style="background:#22C55E;"></div>
+            <span style="color:#64748B;font-size:12px;margin-left:8px;">Sitel · Дашборд</span>
+          </div>
+          <div class="proto-body">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+              <div><div class="proto-label">Звонков сегодня</div><div class="proto-value" style="font-size:1.25rem;">1 247</div></div>
+              <div><div class="proto-label">Скрипт соблюден</div><div class="proto-value" style="font-size:1.25rem;color:var(--green-500);">96%</div></div>
+              <div><div class="proto-label">Конфликты</div><div class="proto-value" style="font-size:1.25rem;color:var(--red-500);">3</div></div>
+            </div>
+            <div class="proto-label">Темы обращений</div>
+            <div class="proto-bar" style="width:85%;background:var(--blue-500);"></div>
+            <div class="proto-bar" style="width:62%;background:var(--blue-600);"></div>
+            <div class="proto-bar" style="width:40%;background:var(--teal-500);"></div>
+            <div class="proto-bar" style="width:18%;background:var(--amber-500);"></div>
+            <div style="margin-top:12px;padding:10px;background:white;border-radius:8px;border:1px solid var(--border);">
+              <div style="font-size:12px;color:var(--text-muted);">⚠ Оператор Мария: балл 62/100, рост эскалаций ×2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="section-blue">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="badge badge-blue" style="margin-bottom:12px;">ВОЗМОЖНОСТИ</span>
+      <h2>Что входит в базовый продукт</h2>
+      <p style="max-width:640px;margin:12px auto 0;color:var(--text-muted);">Работает на вашем сервере навсегда. Без счётчиков минут, без зависимости от интернета.</p>
+    </div>
+    <div class="features-grid">
+      <div class="card">
+        <h4 style="margin-bottom:12px;">🎯 Речевая аналитика 100% звонков</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Транскрибация на CPU, контроль скриптов, эмоции, темы обращений, комплаенс-флаги.</p>
+        <ul style="list-style:none;font-size:13px;color:var(--text-secondary);">
+          <li>→ Каждое правило скрипта — да/нет с цитатой и таймкодом</li>
+          <li>→ Эмоции: агрессия, удовлетворённость у клиента и оператора</li>
+          <li>→ Объективные метрики: перебивания, паузы, доля речи</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:12px;">🤖 ИИ-голосовой помощник</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Входящие и исходящие звонки. Скрипты без программирования, интеграция с базами данных.</p>
+        <ul style="list-style:none;font-size:13px;color:var(--text-secondary);">
+          <li>→ TTS с выбором голоса и интонационной адаптацией</li>
+          <li>→ Уступает слово при попытке прервать</li>
+          <li>→ Простое обучение отраслевой лексике</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:12px;">📊 Скоринг операторов</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Базовый: «у кого и где проблема». Интеллект (по подписке): «почему и что делать».</p>
+        <ul style="list-style:none;font-size:13px;color:var(--text-secondary);">
+          <li>→ Сводный балл, рейтинг команды, автовыявление аномалий</li>
+          <li>→ Эмоциональная динамика по каждому оператору</li>
+          <li>→ Рекомендации коучу с примерами звонков</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:12px;">📈 Дашборды в реальном времени</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Инкрементальное обновление: каждый звонок сразу в аналитике. Без ночного пересчёта.</p>
+        <ul style="list-style:none;font-size:13px;color:var(--text-secondary);">
+          <li>→ Тепловые карты тем, рейтинги, карта эскалаций</li>
+          <li>→ KPI-алерты с push-уведомлениями</li>
+          <li>→ Экспорт в PowerPoint/PDF по расписанию</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT PROTOTYPES -->
+<section>
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <span class="badge badge-dark" style="margin-bottom:12px;">ИНТЕРФЕЙС</span>
+      <h2 style="margin-bottom:12px;">Что видит руководитель и супервайзер</h2>
+      <p style="max-width:720px;color:var(--text-muted);">Прототипы ключевых экранов. Финальные скриншоты появятся после утверждения дизайна.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+      <div class="proto-dashboard">
+        <div class="proto-tag"><span class="badge badge-amber">ПРОТОТИП</span></div>
+        <div class="proto-header">
+          <div class="proto-dot" style="background:#EF4444;"></div>
+          <div class="proto-dot" style="background:#F59E0B;"></div>
+          <div class="proto-dot" style="background:#22C55E;"></div>
+          <span style="color:#64748B;font-size:12px;margin-left:8px;">Карточка звонка</span>
+        </div>
+        <div class="proto-body" style="font-size:13px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+            <span style="font-weight:600;color:var(--text-primary);">Оператор: Мария К.</span>
+            <span class="badge badge-amber">62/100</span>
+          </div>
+          <div style="background:white;padding:10px;border-radius:6px;border:1px solid var(--border);margin-bottom:8px;">
+            <div style="color:var(--green-500);font-size:11px;font-weight:600;">✓ Приветствие</div>
+            <div style="color:var(--green-500);font-size:11px;font-weight:600;">✓ Представление</div>
+            <div style="color:var(--red-500);font-size:11px;font-weight:600;">✗ Условия акции (пропуск)</div>
+            <div style="color:var(--red-500);font-size:11px;font-weight:600;">✗ Работа с возражением</div>
+          </div>
+          <div style="font-size:11px;color:var(--text-muted);">Эмоции: клиент пришёл нейтрально → ушёл раздражён</div>
+        </div>
+      </div>
+      <div class="proto-dashboard">
+        <div class="proto-tag"><span class="badge badge-amber">ПРОТОТИП</span></div>
+        <div class="proto-header">
+          <div class="proto-dot" style="background:#EF4444;"></div>
+          <div class="proto-dot" style="background:#F59E0B;"></div>
+          <div class="proto-dot" style="background:#22C55E;"></div>
+          <span style="color:#64748B;font-size:12px;margin-left:8px;">Рейтинг операторов</span>
+        </div>
+        <div class="proto-body" style="font-size:13px;">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Алексей Д.</span><span style="color:var(--green-500);font-weight:700;">94/100</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Ольга С.</span><span style="color:var(--green-500);font-weight:700;">88/100</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+            <span>Иван Р.</span><span style="color:var(--amber-500);font-weight:700;">75/100</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;background:#FEF2F2;margin:0 -20px;padding:8px 20px;border-radius:4px;">
+            <span>Мария К.</span><span style="color:var(--red-500);font-weight:700;">62/100 ⚠</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- MODULES ACCORDION -->
+<section class="section-blue">
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <span class="badge badge-blue" style="margin-bottom:12px;">МОДУЛИ ПЛАТФОРМЫ</span>
+      <h2>Полный функционал</h2>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)" aria-expanded="false">
+        <span class="title">Речевая аналитика 100% звонков</span>
+        <span class="badge badge-blue">БАЗОВЫЙ</span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-content"><div class="accordion-body"><ul>
+        <li>Транскрибация 100% разговоров на CPU</li>
+        <li>Контроль скриптов: каждое правило — да/нет с цитатой и таймкодом</li>
+        <li>Эмоции: агрессия, удовлетворённость — у клиента и оператора</li>
+        <li>Перебивания, паузы, темп, доля речи оператора</li>
+        <li>Флаги комплаенса: запрещённые фразы, дисклеймеры</li>
+        <li>Темы обращений: что растёт, что появилось впервые</li>
+      </ul></div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)" aria-expanded="false">
+        <span class="title">ИИ-голосовой помощник</span>
+        <span class="badge badge-blue">БАЗОВЫЙ</span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-content"><div class="accordion-body"><ul>
+        <li>Входящие и исходящие звонки</li>
+        <li>Создание скриптов без программирования</li>
+        <li>Лёгкая интеграция с существующими базами данных</li>
+        <li>Простое обучение отраслевой лексике</li>
+        <li>TTS с выбором голоса и интонационной адаптацией</li>
+        <li>Уступает слово при попытке прервать</li>
+      </ul></div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)" aria-expanded="false">
+        <span class="title">Скоринг операторов</span>
+        <span class="badge badge-blue">БАЗОВЫЙ</span>
+        <span class="badge badge-teal">+ ИНТЕЛЛЕКТ</span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-content"><div class="accordion-body">
+        <p style="font-size:14px;margin-bottom:12px;color:var(--text-secondary);">Базовый: <strong>«у кого и где»</strong>. Интеллект: <strong style="color:var(--teal-600);">«почему и что делать»</strong>.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+          <div style="padding:12px;background:var(--bg);border-radius:8px;">
+            <div style="font-size:12px;font-weight:700;color:var(--blue-700);margin-bottom:8px;">БАЗОВЫЙ (ВСЕГДА)</div>
+            <div style="font-size:13px;">✓ Скрипт по каждому звонку<br>✓ Перебивания, паузы, доля речи<br>✓ Эмоциональная динамика<br>✓ Сводный балл, рейтинг<br>✓ Автовыявление аномалий</div>
+          </div>
+          <div style="padding:12px;background:var(--teal-100);border-radius:8px;">
+            <div style="font-size:12px;font-weight:700;color:var(--teal-600);margin-bottom:8px;">ИНТЕЛЛЕКТ (ПО ПОДПИСКЕ)</div>
+            <div style="font-size:13px;">✓ Чек-лист с цитатами<br>✓ Паттерны ошибок<br>✓ Рекомендации коучу<br>✓ Плейбук лучших<br>✓ Прогноз оттока</div>
+          </div>
+        </div>
+        <div style="padding:12px;background:var(--bg);border-radius:8px;font-size:13px;"><strong>Пример:</strong> «Мария: 62/100; в возражениях о цене не выявляет потребность — 14 из 17. Рекомендация: тренинг, 5 эталонных звонков приложены».</div>
+      </div></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-btn" onclick="toggleAccordion(this)" aria-expanded="false">
+        <span class="title">Дашборды в реальном времени</span>
+        <span class="badge badge-blue">БАЗОВЫЙ</span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-content"><div class="accordion-body"><ul>
+        <li>Инкрементально: каждый звонок сразу в аналитике</li>
+        <li>Тепловые карты тем, рейтинги, карта эскалаций</li>
+        <li>KPI-алерты с push-уведомлениями</li>
+        <li>Экспорт в PowerPoint/PDF по расписанию</li>
+      </ul></div></div>
+    </div>
+
+    <div class="accordion-item" style="border-color:var(--teal-500);">
+      <button class="accordion-btn" onclick="toggleAccordion(this)" aria-expanded="false">
+        <span class="title">Расширенная аналитика</span>
+        <span class="badge badge-teal">ИНТЕЛЛЕКТ</span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-content"><div class="accordion-body">
+        <p style="font-size:14px;margin-bottom:12px;">Большая языковая модель (32+ млрд параметров). Объясняет причины, даёт рекомендации, прогнозирует поведение клиентов.</p>
+        <ul>
+          <li>Полный чек-лист с цитатами-обоснованиями</li>
+          <li>Паттерны проблем по сотням звонков</li>
+          <li>Еженедельные дайджесты для руководства</li>
+          <li>Прогноз оттока клиентов</li>
+          <li><strong>Самообучение бота:</strong> лучшие ответы → навыки</li>
+        </ul>
+        <div style="margin-top:12px;padding:12px;background:var(--teal-100);border-radius:8px;font-size:13px;"><strong style="color:var(--teal-600);">Важно:</strong> отключение подписки не приводит к потере данных.</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE PREVIEW -->
+<section>
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="badge badge-blue" style="margin-bottom:12px;">АРХИТЕКТУРА</span>
+      <h2>Базовый — у вас. Интеллект — по подписке</h2>
+      <p style="max-width:720px;margin:12px auto 0;color:var(--text-muted);">Распознавание речи на CPU, большая языковая модель опциональна. Три контура развёртывания — вы выбираете границу.</p>
+    </div>
+
+    <div class="card-flat" style="margin-bottom:40px;overflow-x:auto;">
+      <h3 style="margin-bottom:16px;">Карточка звонка: Базовый и Интеллект</h3>
+      <table class="compare-table">
+        <thead><tr><th>Поле</th><th>Базовый (всегда)</th><th>+ Интеллект</th></tr></thead>
+        <tbody>
+          <tr><td>Текст разговора</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Скрипт (по пунктам)</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Эмоции, метрики</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Простые проверки (да/нет)</td><td class="check">✓ малая модель</td><td class="check">✓</td></tr>
+          <tr><td>Краткое резюме</td><td class="check">✓ малая модель</td><td class="check">✓</td></tr>
+          <tr><td>Чек-лист с цитатами</td><td class="pending">⏳ дозаполнится</td><td class="check">✓</td></tr>
+          <tr><td>Рекомендация коучу</td><td class="dash">—</td><td class="check">✓</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">⏳ Поля дозаполняются задним числом при подключении. Ничего не теряется.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="card">
+        <span class="badge badge-blue" style="margin-bottom:12px;">КОНТУР А</span>
+        <h4 style="margin-bottom:8px;">Свой GPU-сервер</h4>
+        <p style="font-size:14px;color:var(--text-muted);">Для банков, телеком, госсектора. Данные не покидают периметр. Один сервер обслуживает все филиалы.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-teal" style="margin-bottom:12px;">КОНТУР Б</span>
+        <h4 style="margin-bottom:8px;">Наш сервис по подписке</h4>
+        <p style="font-size:14px;color:var(--text-muted);">Обезличенные тексты (ПДн вырезаются до отправки) → оценки обратно. Аудио не передаётся никогда.</p>
+      </div>
+      <div class="card">
+        <span class="badge badge-amber" style="margin-bottom:12px;">КОНТУР В</span>
+        <h4 style="margin-bottom:8px;">Аренда на ночь</h4>
+        <p style="font-size:14px;color:var(--text-muted);">Машина поднимается на 1–2 часа, обрабатывает очередь и гасится. 10 000 звонков за ночь.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="architecture.html" class="btn btn-outline">Подробнее об архитектуре →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY PREVIEW -->
+<section class="section-blue">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="badge badge-blue" style="margin-bottom:12px;">БЕЗОПАСНОСТЬ</span>
+      <h2>Данные в вашем контуре</h2>
+    </div>
+    <div class="security-grid">
+      <div class="card">
+        <h4 style="margin-bottom:8px;">152-ФЗ</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Персональные данные обрабатываются в соответствии с 152-ФЗ. В контуре Б — обезличивание до отправки.</p>
+        <span class="badge badge-template">ШАБЛОН — СЕРТИФИКАТ В ПРОЦЕССЕ</span>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:8px;">Реестр отечественного ПО</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Статус в реестре Минцифры. Подходит для госсектора и импортозамещения.</p>
+        <span class="badge badge-template">ШАБЛОН — ЗАЯВКА ПОДАНА</span>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:8px;">ФСТЭК</h4>
+        <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">Сертификация для работы с защищаемой информацией.</p>
+        <span class="badge badge-template">ШАБЛОН — ПЛАНИРУЕТСЯ</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="security.html" class="btn btn-outline">Подробнее о безопасности →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top-grid">
+      
+      <!-- Колонка 1: Контакты -->
+      <div class="footer-info-block">
+        <h4>ПРЯМАЯ СВЯЗЬ</h4>
+        <div class="contact-item">
+          <span class="contact-label">Телефон</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-value"><span class="badge badge-template">НЕ ЗАПОЛНЕНО</span></span>
+        </div>
+      </div>
+      
+      <!-- Колонка 2: Платформы -->
+      <div class="footer-info-block">
+        <h4>ПЛАТФОРМЫ</h4>
+        <a href="index.html">Речевая аналитика</a>
+        <a href="platforms/auto-order.html">Умный автозаказ</a>
+        <a href="architecture.html">Архитектура</a>
+        <a href="platforms/auto-order.html">Оборудование</a>
+      </div>
+
+      <!-- Колонка 3: Компания -->
+      <div class="footer-info-block">
+        <h4>КОМПАНИЯ</h4>
+        <a href="cases.html">Кейсы</a>
+        <a href="security.html">Безопасность</a>
+      </div>
+
+      <!-- Колонка 4: Документы -->
+      <div class="footer-info-block">
+        <h4>ДОКУМЕНТЫ</h4>
+        <a href="privacy.html">Политика ПД</a>
+        <a href="#">Соглашение</a>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <span>© 2026 Sitel</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Mobile menu
+function closeMobile() { 
+  document.getElementById('mobile-menu').classList.remove('open'); 
+}
+
+// Dropdown
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
+  if (!dropdown) return;
+  dropdown.classList.toggle('open');
+}
+
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.dropdown.open').forEach(d => {
+    if (!d.contains(e.target)) d.classList.remove('open');
+  });
+});
+
+// Accordion
+function toggleAccordion(btn) {
+  const content = btn.nextElementSibling;
+  const arrow = btn.querySelector('.arrow');
+  if (!content || !arrow) return;
+  const isOpen = content.classList.contains('open');
+  document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+  document.querySelectorAll('.arrow').forEach(a => a.classList.remove('open'));
+  btn.setAttribute('aria-expanded', !isOpen);
+  if (!isOpen) { content.classList.add('open'); arrow.classList.add('open'); }
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || this.getAttribute('onclick')) return;
+    const target = document.querySelector(href);
+    if (target) { 
+      e.preventDefault(); 
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' }); 
+      closeMobile(); 
+    }
+  });
+});
+</script>
+</body>
+</html>
